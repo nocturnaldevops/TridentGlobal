@@ -12,7 +12,11 @@ pipeline
         }
         stage("build")
         {
+steps{
+
+
             sh 'clean sonar:sonar package'
+}
         }
     }
 }
