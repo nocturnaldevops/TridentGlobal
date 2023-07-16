@@ -3,16 +3,16 @@ pipeline
     agent any
     stages
     {
-        stage
+        stage("checkout_code")
         {
             steps
             {
                 git 'https://github.com/nocturnaldevops/TridentGlobal.git'
             }
         }
-        stage
+        stage("build")
         {
-            
+            sh 'clean sonar:sonar package'
         }
     }
 }
