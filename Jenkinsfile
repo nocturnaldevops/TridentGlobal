@@ -15,7 +15,7 @@ pipeline
 steps{
 
 
-            sh 'clean sonar:sonar package'
+            sh 'mvn clean sonar:sonar package'
 }
         }
     }
